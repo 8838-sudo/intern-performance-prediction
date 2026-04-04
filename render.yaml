@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: intern-performance-api
+    runtime: docker
+    plan: free # Free tier for hobby projects
+    region: ohio # Change if needed
+    envVars:
+      - key: PORT
+        value: 8000
+      - key: PYTHONUNBUFFERED
+        value: 1
+    healthCheckPath: /
+    autoDeploy: true

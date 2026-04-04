@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intern Performance Predictor | Analytics Dashboard</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Predict intern performance using advanced machine learning models. Upload CSV/Excel and get actionable insights.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="glass-bg"></div>
+    
+    <header>
+        <div class="container">
+            <div class="logo">
+                <span class="gradient-text">InternAI</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#dashboard" class="active">Dashboard</a></li>
+                    <li><a href="#" onclick="alert('Coming soon!')">History</a></li>
+                    <li><a href="/docs" target="_blank">API Docs</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="dashboard" class="container">
+        <section class="hero-section">
+            <h1>Predict <span class="gradient-text">Performance</span> with Precision.</h1>
+            <p>Upload your team's metrics and let our Gradient Boosting model predict performance scores instantly.</p>
+        </section>
+
+        <div class="grid-layout">
+            <!-- Upload Card -->
+            <section class="card upload-card" id="upload-section">
+                <h2>Upload Metrics</h2>
+                <div class="upload-area" id="drop-zone">
+                    <div class="icon-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="upload-icon"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                    </div>
+                    <p>Drag & drop multi-intern records (CSV, XLSX)</p>
+                    <label for="file-input" class="btn btn-primary">Browse Files</label>
+                    <input type="file" id="file-input" accept=".csv, .xlsx, .xls" hidden>
+                </div>
+                <div id="file-status"></div>
+            </section>
+
+            <!-- Chart Card -->
+            <section class="card chart-card">
+                <h2>Performance Overview</h2>
+                <div class="chart-container">
+                    <canvas id="performanceChart"></canvas>
+                </div>
+                <div id="chart-placeholder" class="placeholder-text">
+                    Waiting for data...
+                </div>
+            </section>
+        </div>
+
+        <!-- Results Table -->
+        <section class="card table-card hidden" id="results-card">
+            <h2>Detailed Predictions</h2>
+            <div class="table-wrapper">
+                <table id="results-table">
+                    <thead>
+                        <tr>
+                            <th>Intern ID</th>
+                            <th>Predicted Score</th>
+                            <th>Performance Level</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Data will be injected here -->
+                    </tbody>
+                </table>
+            </div>
+            <button id="download-btn" class="btn btn-secondary mt-20">Download Report</button>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 InternAI Performance System. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div id="loader" class="loader-overlay hidden">
+        <div class="spinner"></div>
+        <p>Analyzing performance data...</p>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+intern_id,task_completion_rate,consistency_score,engagement_metric
+LOW-001,0.1,0.1,0.1
+LOW-002,0.2,0.1,0.15
+MID-001,0.5,0.5,0.5
+HIGH-001,0.9,0.9,0.9

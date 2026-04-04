@@ -1,0 +1,41 @@
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+venv.bak/
+.venv/
+ENV/
+
+# Data and CSV files (if you don't want to push your local data)
+# intern_data.csv
+# clean_intern_data.csv
+
+# Models (pushed to git, but you can also use LFS)
+# model.pkl
+# scaler.pkl
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
