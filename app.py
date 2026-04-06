@@ -9,6 +9,11 @@ from io import BytesIO
 import warnings
 import os
 import traceback
+import mimetypes
+
+# Ensure correct MIME types for static files
+mimetypes.add_type('text/css', '.css')
+mimetypes.add_type('application/javascript', '.js')
 
 warnings.filterwarnings('ignore')
 
