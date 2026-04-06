@@ -230,9 +230,6 @@ th {
     letter-spacing: 0.05em;
 }
 
-.hidden {
-    display: none;
-}
 
 /* Loader Overlay */
 .loader-overlay {
@@ -274,6 +271,11 @@ footer {
 }
 
 .mt-20 { margin-top: 1.25rem; }
+
+/* Utility classes - keep at bottom */
+.hidden {
+    display: none !important;
+}
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
