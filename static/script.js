@@ -1,3 +1,6 @@
+/**
+ * Intern Performance System - v1.0.1
+ */
 document.addEventListener('DOMContentLoaded', () => {
     const dropZone = document.getElementById('drop-zone');
     const fileInput = document.getElementById('file-input');
